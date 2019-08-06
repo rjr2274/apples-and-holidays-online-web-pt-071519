@@ -55,30 +55,8 @@ end
 
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays|
-    current_holiday = []
-    current_supplies = []
-    current_season = season.to_s.capitalize
-    holidays.each do |holiday, supplies|
+      puts "#{season.capitalize}:"
       binding.pry
-      current_holiday = holiday.to_s.capitalize
-      if current_holiday.include?("_")
-        current_holiday.sub!("_", " ")
-        if current_holiday.include?("_")
-          current_holiday.sub!("_", " ")
-        end
-      end
-      if current_holiday.include?(" ")
-        new_word = []
-        current_holiday.split(" ").each do |holiday|
-          new_word << holiday.capitalize
-        end
-        new_word = new_word.join(" ")
-        current_holiday = new_word
-      end
-      current_supplies = supplies.join(" ")
-    end
-    puts "#{current_season}:"
-    puts "#{  current_holiday}: #{current_supplies}"
   end
 end
 
